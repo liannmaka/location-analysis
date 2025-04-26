@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -32,7 +33,7 @@ const navLinks: NavLink[] = [
   },
 ];
 
-const Header = () => {
+const Header: React.FC = () => {
   const pathname = usePathname();
 
   return (
