@@ -6,7 +6,7 @@ import DemographicTrends from "./components/DemographicTrends";
 import ProximityInsights from "./components/ProximityInsights";
 import ZoningOverlays from "./components/ZoningOverlays";
 
-import Header from "@/components/Header";
+import { Header } from "@/components";
 
 export default function LocationAnalysisPage() {
   return (
