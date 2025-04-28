@@ -1,6 +1,6 @@
 'use client';
 
-import ChartWrapper from '@/components/ChartWrapper';
+import { ChartWrapper } from '@/components'
 import { demographicTrendsData } from '../data/mockData';
 
 interface DemographicTrendsProps {
