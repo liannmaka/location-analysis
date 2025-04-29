@@ -6,12 +6,9 @@ import DemographicTrends from "./components/DemographicTrends";
 import ProximityInsights from "./components/ProximityInsights";
 import ZoningOverlays from "./components/ZoningOverlays";
 
-import { Header } from "@/components";
-
 export default function LocationAnalysisPage() {
   return (
-    <div className="px-8">
-      <Header />
+    <div>
       <hr className="mt-4 border-[#E4E4E7] border-[1px]" />
       {/* <div className="bg-black">
       Download as PDF
