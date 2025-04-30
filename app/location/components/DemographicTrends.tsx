@@ -1,7 +1,12 @@
 'use client';
 
-import { ChartWrapper } from '@/components'
+import dynamic from "next/dynamic";
 import { demographicTrendsData } from '../data/mockData';
+
+const ChartWrapper = dynamic(() => import('@/components/ChartWrapper'), {
+  ssr: false,
+  loading: () => <p className="flex justify-center items-center h-[250px] text-md">Loading....</p>,
+});
 
 interface DemographicTrendsProps {
   className?: string;
