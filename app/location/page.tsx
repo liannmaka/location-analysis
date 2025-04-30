@@ -6,7 +6,8 @@ import DemographicTrends from "./components/DemographicTrends";
 import ProximityInsights from "./components/ProximityInsights";
 import ZoningOverlays from "./components/ZoningOverlays";
 
-export default function LocationAnalysisPage() {
+
+const LocationAnalysisPage = () => {
   return (
     <div>
       <hr className="mt-4 border-[#E4E4E7] border-[1px]" />
@@ -37,3 +38,5 @@ export default function LocationAnalysisPage() {
     </div>
   );
 }
+
+export default LocationAnalysisPage
