@@ -2,7 +2,7 @@
 
 import { zoningOverlaysData } from '../data/mockData';
 
-export default function ZoningOverlays() {
+const ZoningOverlays = () => {
   return (
     <div>
       <h2 className="font-semibold text-sm md:text-lg">Zoning Overlays</h2>
@@ -37,3 +37,5 @@ export default function ZoningOverlays() {
     </div>
   );
 }
+
+export default ZoningOverlays
