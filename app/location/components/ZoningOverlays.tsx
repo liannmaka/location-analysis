@@ -1,8 +1,20 @@
 'use client';
 
+import React from 'react';
 import { zoningOverlaysData } from '../data/mockData';
 
-const ZoningOverlays = () => {
+interface ZoningOverlays {
+  id: string | number
+  zone: string
+  description: string
+  source: string
+}
+
+interface ZoningOverlaysProps {
+  data: ZoningOverlays[]
+}
+
+const ZoningOverlays: React.FC<ZoningOverlaysProps> = () => {
   return (
     <div>
       <h2 className="font-semibold text-sm md:text-lg">Zoning Overlays</h2>
@@ -26,7 +38,7 @@ const ZoningOverlays = () => {
                 href={item.source}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#223e92] underline text-xs self-center ease-in-out hover:scale-[1.02]"
+                className="text-[#223e92] underline text-xs self-center ease-in-out transition-transform hover:scale-[1.02]"
               >
                 View Source
               </a>
