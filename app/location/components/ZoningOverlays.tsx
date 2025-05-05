@@ -10,11 +10,8 @@ interface ZoningOverlays {
   source: string
 }
 
-interface ZoningOverlaysProps {
-  data: ZoningOverlays[]
-}
 
-const ZoningOverlays: React.FC<ZoningOverlaysProps> = () => {
+const ZoningOverlays: React.FC = () => {
   return (
     <div>
       <h2 className="font-semibold text-sm md:text-lg">Zoning Overlays</h2>
@@ -22,20 +19,20 @@ const ZoningOverlays: React.FC<ZoningOverlaysProps> = () => {
         View zoning classifications and direct municipal reference links.
       </p>
       <div className="space-y-4">
-        {zoningOverlaysData.map((item) => (
+        {zoningOverlaysData.map(({id, zone, description, source}) => (
           <div
-            key={item.id}
+            key={id}
             className="bg-white border border-[#E4E4E7] rounded-lg shadow-sm p-4"
           >
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-xs md:text-sm font-medium mb-1 text-[#0a2472]">
-                  Zoning Code: {item.zone}
+                  Zoning Code: {zone}
                 </h3>
-                <p className="text-gray-700 text-xs md:text-sm">{item.description}</p>
+                <p className="text-gray-700 text-xs md:text-sm">{description}</p>
               </div>
               <a
-                href={item.source}
+                href={source}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#223e92] underline text-xs self-center ease-in-out transition-transform hover:scale-[1.02]"
