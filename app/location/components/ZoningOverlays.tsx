@@ -19,20 +19,20 @@ const ZoningOverlays: React.FC = () => {
         View zoning classifications and direct municipal reference links.
       </p>
       <div className="space-y-4">
-        {zoningOverlaysData.map(({id, zone, description, source}) => (
+        {zoningOverlaysData.map((item) => (
           <div
-            key={id}
+            key={item.id}
             className="bg-white border border-[#E4E4E7] rounded-lg shadow-sm p-4"
           >
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-xs md:text-sm font-medium mb-1 text-[#0a2472]">
-                  Zoning Code: {zone}
+                  Zoning Code: {item.zone}
                 </h3>
-                <p className="text-gray-700 text-xs md:text-sm">{description}</p>
+                <p className="text-gray-700 text-xs md:text-sm">{item.description}</p>
               </div>
               <a
-                href={source}
+                href={item.source}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#223e92] underline text-xs self-center ease-in-out transition-transform hover:scale-[1.02]"
