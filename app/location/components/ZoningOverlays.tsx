@@ -16,7 +16,7 @@ const ZoningOverlays: React.FC = () => {
     <div>
       <h2 className="font-semibold text-sm md:text-lg">Zoning Overlays</h2>
       <p className="text-xs md:text-sm text-gray-600 mb-4">
-        View zoning classifications and direct municipal reference links.
+        View zoning classifications and direct municipal reference links
       </p>
       <div className="space-y-4">
         {zoningOverlaysData.map((item) => (
